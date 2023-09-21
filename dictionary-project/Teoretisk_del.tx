@@ -1,13 +1,31 @@
-1. [G] Vad är syftet med olika build tools?
+1. Vad är syftet med olika build tools?
+Build tools är program som underlättar arbetet med kod. Omvandling av kod, packetering,
+testning och skicka till produktions-system är saker som build tools gör. Build tools gör
+så att arbetet med att produktionssätta kod blir automatiserat vilket sparar mycket tid
+och gör livet smidigare för utvecklare.
+
 2. [G] Vad är Hot Module Replacement?
+Det är e
+
+
 3. [G] Berätta om några olika metoder Webpack använder för att öka prestandan hos
 din applikation.
+
+
 4. [G] Förklara hur en "Dependency Graph" fungerar i Webpack. Illustrera grafiskt.
+
+
 5. [G] Förklara hur "Tree Shaking fungerar".
+
+
 6. [VG] Välj en Webpack plugin och visa hur den fungerar. Detta ska göras med
 utdrag från koden och/eller bilder. Resonera även kring när din plugin skulle
 kunna vara användbar.
+
+
 7. [VG] Du upplever Webpack som långsamt i ditt projekt. Vad kan det bero på och
 vad kan du göra åt det?
+
+
 8. [VG] Leta reda på två andra build tools än Webpack och resonera kring hur dessa
 skiljer sig från Webpack. Referera till dokumentation eller andra källor.

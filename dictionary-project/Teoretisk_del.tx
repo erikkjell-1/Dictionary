@@ -1,31 +1,26 @@
 1. Vad är syftet med olika build tools?
-Build tools är program som underlättar arbetet med kod. Omvandling av kod, packetering,
-testning och skicka till produktions-system är saker som build tools gör. Build tools gör
-så att arbetet med att produktionssätta kod blir automatiserat vilket sparar mycket tid
-och gör livet smidigare för utvecklare.
+Build tools är program som underlättar arbetet med kod.Omvandling av kod, packetering, testning och skicka till produktions-system är saker som build tools gör. Build  tools gör så att arbetet med att produktionssätta kod blir automatiserat vilket sparar mycket tid och gör livet smidigare för utvecklare.
 
 2. [G] Vad är Hot Module Replacement?
-Det är e
+Det är en fuktion från webpack som gör det möjligt att uppdatera alla moduler utan att behöva göra en fullständig uppdateringering det vill säga att den kan byta/ta bort/lägga till moduler medans programet körs utan omladdning vilket sparar mycket tid.
 
-
-3. [G] Berätta om några olika metoder Webpack använder för att öka prestandan hos
-din applikation.
-
+3. [G] Berätta om några olika metoder Webpack använder för att öka prestandan hos din applikation.
+Webpack använder massa olika metoder för att öka prestandan i ens projekt. Webpack är en "bundler" alltså att den paketerar ihop kod i olika paket och förser datorn med de endast när det behövs för att minska laddningstider. Den splittar även upp kod i samma syfte så att enbart den koden som används ska laddas in till sidan. Samma sak gör webpack även på rutt-nivå och komponentnivå. En annan sak som webpack gör som optimerar laddningstiden är att den separerar applikationskod och tredjepartsbibliotek.
 
 4. [G] Förklara hur en "Dependency Graph" fungerar i Webpack. Illustrera grafiskt.
-
+En "Dependency Graph" visar vilka filer som är i behov av varandra för information som ifall jag hämtar ett API i api.js som jag sedan mapar ut i app.jsx så är app i det här fallet i ett behov av att api.js laddas in först därför hamnar den ovanför i en "Dependency Graph".
+Webpack formatterar sen om ens kod i en stor "bundle" där det istället hamnar i den ordningen som koden är i behov av varandra.
+Exempel: 
+api.js -> app.jsx -> app.css
 
 5. [G] Förklara hur "Tree Shaking fungerar".
+För att optimera ens kod så tar "bundlers" bort död kod alltså kod som inte har någon som helst påverkan på resultatet på den slutgiltiga produkten utan enbart tar plats samt tid att ladda in.
 
 
-6. [VG] Välj en Webpack plugin och visa hur den fungerar. Detta ska göras med
-utdrag från koden och/eller bilder. Resonera även kring när din plugin skulle
-kunna vara användbar.
+6. [VG] Välj en Webpack plugin och visa hur den fungerar. Detta ska göras med utdrag från koden och/eller bilder. Resonera även kring när din plugin skulle kunna vara användbar.
 
 
-7. [VG] Du upplever Webpack som långsamt i ditt projekt. Vad kan det bero på och
-vad kan du göra åt det?
+7. [VG] Du upplever Webpack som långsamt i ditt projekt. Vad kan det bero på och vad kan du göra åt det?
 
 
-8. [VG] Leta reda på två andra build tools än Webpack och resonera kring hur dessa
-skiljer sig från Webpack. Referera till dokumentation eller andra källor.
+8. [VG] Leta reda på två andra build tools än Webpack och resonera kring hur dessa skiljer sig från Webpack. Referera till dokumentation eller andra källor.

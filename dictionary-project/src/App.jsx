@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import './App.css'
+import './Index.css'
 
 function App() {
   const [searchWord, setSearchWord] = useState('');
   const [apiAnswerDef, setApiAnswerDef] = useState('');
-  const [apiAnswerTwo, setApiAnswerTwo] = useState('');
+  const [apiAnswerPho, setApiAnswerPho] = useState('');
   const [apiAnswerAudio, setApiAnswerAudio] = useState('');
   const [apiError, setApiError] = useState('');
   const [apiLoading, setApiLoading] = useState(false);
@@ -20,14 +20,14 @@ function App() {
       console.log(apiError);
     } else {
       setApiAnswerDef(data[0].meanings[0].definitions[0].definition);
-      setApiAnswerTwo(data[0].phonetics[0]);
+      setApiAnswerPho(data[0].phonetics[0]);
       setApiAnswerAudio(data[0].phonetics[0].sourceUrl);
       setApiLoading(false);
     }
     
   }
   return (
-      <div className='startpage'>
+      <div className='App'>
         <header>
         <h1>Dictionary</h1>
         </header>
@@ -37,8 +37,9 @@ function App() {
         <button type="submit" onClick={() => HandleApi(searchWord)}>Search</button>
         </main>
         <section>
+          <h2> {searchWord} </h2>
           {apiLoading ? <p>Loading...</p> : <p>{apiAnswerDef}</p>}
-          {apiLoading ? <p>Loading...</p> : <p>{apiAnswerTwo.text}</p>}
+          {apiLoading ? <p>Loading...</p> : <p>{apiAnswerPho.text}</p>}
           <audio controls>
             <source src={apiAnswerAudio.audio} type='HTMLAudioElement/mpeg'></source>
             </audio>

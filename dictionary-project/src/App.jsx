@@ -14,14 +14,14 @@ function App() {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord}`);
     const data = await response.json();
    
-    if (searchWord === "No Definitions Found") {
-      setApiError(data.title);
+    if (data === null) {
+      setApiError("No Definitions Found");
       setApiLoading(false);
       console.log(apiError);
     } else {
       setApiAnswerDef(data[0].meanings[0].definitions[0].definition);
       setApiAnswerPho(data[0].phonetics[0]);
-      setApiAnswerAudio(data[0].phonetics[0].sourceUrl);
+      setApiAnswerAudio(data[0].phonetics[0].audio);
       setApiLoading(false);
     }
     
@@ -37,16 +37,15 @@ function App() {
         <button type="submit" onClick={() => HandleApi(searchWord)}>Search</button>
         </main>
         <section>
-          <h2> {searchWord} </h2>
-          {apiLoading ? <p>Loading...</p> : <p>{apiAnswerDef}</p>}
-          {apiLoading ? <p>Loading...</p> : <p>{apiAnswerPho.text}</p>}
-          <audio controls>
-            <source src={apiAnswerAudio.audio} type='HTMLAudioElement/mpeg'></source>
-            </audio>
+          <h2>{searchWord}</h2>
+          {apiLoading ? <p>Loading...</p> : <p>{apiError}</p>}
+      
+          {apiLoading ? <p>Loading...</p> : <p>Definition: {apiAnswerDef}</p>}
+          {apiLoading ? <p>Loading...</p> : <p>Phonetic: {apiAnswerPho.text}</p>}
+          <audio controls test-id='audio' src={apiAnswerAudio}></audio>
         </section>
         
     </div>
   )
 }
-
-export default App
+export default App;

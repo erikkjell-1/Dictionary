@@ -1,40 +1,47 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
   font-family: 'Mooli', sans-serif;
 }
 .App {
-  background: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+
+.Dictionary {
   color: white;
-  height: 500px;
+  height: 600px;
   width: 1200px;
   border-radius: 2rem;
   font-family: 'Mooli', sans-serif;
 background-image: linear-gradient(
   45deg,
-  #000000 0%,
-  #000000 20%,
-  #292243 20%,
-  #292243 40%,
-  #000000 40%,
-  #000000 60%,
-  #292243 60%,
-  #292243 80%,
-  #000000 80%,
-  #000000 100%
+  #0e0241 0%,
+  #0e0241 20%,
+  #2a0f8d 20%,
+  #2a0f8d 40%,
+  #0e0241 40%,
+  #0e0241 60%,
+  #2a0f8d 60%,
+  #2a0f8d 80%,
+  #0e0241 80%,
+  #0e0241 100%
   );
+  box-shadow: #00ccff 1px 0 10px;
 }
 
 input {
-  border: 1px solid #7575d0;
+  border: 1px solid #2a0f8d;
   border-radius: 5px;
   padding: 0.5rem;
   margin: 0.5rem;
   width: 50%;
   font-size: 1rem;
-  color: #000000;
+  color: #0e0241;
   font-family: 'Mooli', sans-serif;
 }
 
@@ -48,24 +55,27 @@ header {
 
 h1 {
   font-size: 3rem;
-  color: #746dc0;
+  color: #ffffff;
+  font-family: 'Mooli', sans-serif;
+  text-shadow: #1100ff 1px 0 10px;
+
   margin-bottom: 0.5rem;
 }
 
 button {
   background-color: #ffffff;
-  border: 1px solid #767496;
+  border: 1px solid #1100ff;
   border-radius: 5px;
   padding: 0.5rem;
   margin: 0.5rem;
   width: 10%;
   font-size: 1rem;
-  color: #000000;
+  color: #2a0f8d;
   font-family: 'Mooli', sans-serif;
 }
 
 button:hover {
-  background-color: #746dc0;
+  background-color: #0e0241;
   color: #ffffff;
-  border: 1px solid black;
+  box-shadow: #1100ff 1px 0 10px;
 }

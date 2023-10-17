@@ -40,6 +40,8 @@ function App() {
   }
   return (
     <div className='App'>
+
+      <div className='Dictionary'>
       <header>
         <h1>Dictionary</h1>
       </header>
@@ -63,7 +65,9 @@ function App() {
         <audio controls test-id='audio' src={apiAnswerAudio}></audio>
       </section>
       )}
+
       
+    </div>
     </div>
   )
 }
